@@ -6,6 +6,7 @@ import img2 from "../../images/Group 2.svg";
 import amoImg from "../../images/pngwing.com (1).png"
 import googleIcon from  "../../images/Group 9@2x.png"
 import FacIcon from  "../../images/Rectangle 17@2x.png"
+
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -16,6 +17,11 @@ const Login = () => {
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
+  };
+
+  const validatePassword = (password) => {
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    return passwordRegex.test(password);
   };
 
   const handleSubmit = (e) => {
@@ -29,6 +35,12 @@ const Login = () => {
 
     if (!validateEmail(email)) {
       setError('Please enter a valid email address');
+      setSuccess(false);
+      return;
+    }
+
+    if (!validatePassword(password)) {
+      setError('Password must be at least 8 characters long and include at least one letter and one number');
       setSuccess(false);
       return;
     }
@@ -76,7 +88,6 @@ const Login = () => {
           <button type="submit" className={styles.loginButton}>Sign In</button>
         </form>
 
-        {/* Links */}
         <div className={styles.links}>
           <a href="/forgot-password" className={styles.link}>Forgot Password?</a>
           <a href="/signup" className={styles.newLink}>New User? Sign Up</a>
