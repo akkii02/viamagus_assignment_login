@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Quicksand:wght@300..700&display=swap');
+
+.mainContainer {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("../../images/Rectangle\ 1@2x.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.formContainer {
+    padding: 5px;
+    width: 90%;
+    margin: auto;
+}
+
+.logoContainer {
+    width: 100%;
+    height: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 7px #00000029;
+    border-radius: 6px 6px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head {
+    width: 100%;
+    text-align: center;
+    color: #20B716;
+    font-family: "Josefin Sans", serif;
+    font-size: 25px;
+    padding: 0;
+    margin: 5px 0;
+}
+
+.logo {
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+.imageContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}
+
+.form {
+    margin-bottom: 20px;
+}
+
+.inputGroup {
+    margin-bottom: 15px;
+}
+
+.inputGroup label {
+    color: #20B716;
+    font-family: "Josefin Sans", serif;
+    font-size: 15px;
+}
+
+.inputGroup input {
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.inputGroup input:focus {
+    border-bottom: 2px solid #20B716;
+}
+
+.divider {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #000000;
+    font-family: "Josefin Sans", serif;
+}
+
+.error {
+    color: #EE2D6E;
+    font-family: "Quicksand", serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.success {
+    color: green;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.loginButton {
+    padding: 10px 15px;
+    background-color: #20B716;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+    font-family: "Josefin Sans", serif;
+    font-size: 20px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Josefin Sans", serif;
+    color: #000000;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.newLink {
+    color: #D9185F;
+}
+
+.link {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.socialButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.socialButton {
+    padding: 4px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socialMediaText {
+    width: 70%;
+    font-family: "Josefin Sans", serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.icons {
+    width: 36px;
+    height: 36px;
+}
+
+.googleButton {
+    background-color: #4285F4;
+    color: white;
+}
+
+.facebookButton {
+    background-color: #1877F2;
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .head {
+        font-size: 20px;
+    }
+
+    .loginButton {
+        font-size: 18px;
+    }
+
+    .socialMediaText {
+        font-size: 16px;
+    }
+
+    .divider {
+        font-size: 14px;
+    }
+
+    .inputGroup label {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 380px) {
+    .logo {
+        max-width: 80px;
+    }
+
+    .head {
+        font-size: 18px;
+    }
+
+    .loginButton {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .socialMediaText {
+        font-size: 14px;
+    }
+
+    .icons {
+        width: 30px;
+        height: 30px;
+    }
+
+    .divider {
+        font-size: 12px;
+    }
+}
